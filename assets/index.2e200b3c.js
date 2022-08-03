@@ -78,4 +78,4 @@ Error generating stack: `+o.message+`
     width: 100%;
     overflow: hidden;
     height: max(500px, 100vh);
-`,L0="/assets/landing.7fcbb3eb.png",O0=()=>Te(Ao,{children:Sd(R0,{className:"center",children:[Te("h1",{children:"Page deployed!"}),Te("img",{src:L0,alt:""})]})}),A0=()=>Te(Ao,{children:Te(pm,{children:Te(dm,{children:Te(lu,{path:"/",element:Te(T0,{}),children:Te(lu,{index:!0,element:Te(O0,{})})})})})}),I0=fi.createRoot(document.getElementById("root"));I0.render(Te(Mr.StrictMode,{children:Te(A0,{})}));
+`,L0="/we-remember/assets/landing.7fcbb3eb.png",O0=()=>Te(Ao,{children:Sd(R0,{className:"center",children:[Te("h1",{children:"Page deployed!"}),Te("img",{src:L0,alt:""})]})}),A0=()=>Te(Ao,{children:Te(pm,{children:Te(dm,{children:Te(lu,{path:"/",element:Te(T0,{}),children:Te(lu,{index:!0,element:Te(O0,{})})})})})}),I0=fi.createRoot(document.getElementById("root"));I0.render(Te(Mr.StrictMode,{children:Te(A0,{})}));
