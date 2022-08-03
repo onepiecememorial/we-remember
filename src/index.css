@@ -1,0 +1,26 @@
+* {
+  color: black;
+  font-weight: normal;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+html,
+body {
+  font-size: 16px;
+  min-height: 100vh; /*Remove when it becomes a bother*/
+  width: 100%;
+}
+
+#root {
+  width: 100%;
+}
+
+/* Common */
+.center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}

@@ -1,21 +1,18 @@
-import { FC } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Layout from "./Layout/Layout";
-import Home from "./Pages/Home/Home";
+import { FC } from 'react';
+import { HashRouter, Route, Routes } from 'react-router-dom';
+import Layout from './Layout/Layout';
+import Home from './Pages/Home/Home';
 
-
-const App:FC = () => {
-  return ( 
-    <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Layout/>}>
-            <Route index element={<Home/>}/>
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </>
+const App: FC = () => {
+  return (
+    <HashRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+        </Route>
+      </Routes>
+    </HashRouter>
   );
-}
+};
 
 export default App;
