@@ -1,12 +1,12 @@
 import { FC } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./Layout/Layout";
-import Home from "./Pages/Home";
+import Home from "./Pages/Home/Home";
 
 
 const App:FC = () => {
   return ( 
-    <div className="App">
+    <>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout/>}>
@@ -14,7 +14,7 @@ const App:FC = () => {
           </Route>
         </Routes>
       </BrowserRouter>
-    </div>
+    </>
   );
 }
 

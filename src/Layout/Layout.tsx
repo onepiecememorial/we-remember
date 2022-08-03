@@ -4,10 +4,10 @@ import Nav from "../Common/Nav/Nav"
 
 const Layout:FC = () => {
   return (
-    <div>
+    <>
         <Nav/>
         <Outlet/>
-    </div>
+    </>
   )
 }
 
