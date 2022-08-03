@@ -82,4 +82,4 @@ Error generating stack: `+o.message+`
   > img {
     width: 100%;
   }
-`,O0="/we-remember/assets/landing.7fcbb3eb.png",A0=()=>Ae(ys,{children:kd(L0,{children:[Ae("h1",{className:"center",children:"Page deployed!"}),Ae("img",{src:O0,alt:""})]})}),I0=()=>Ae(hm,{children:Ae(pm,{children:Ae(lu,{path:"/",element:Ae(R0,{}),children:Ae(lu,{index:!0,element:Ae(A0,{})})})})});const M0=fi.createRoot(document.getElementById("root"));M0.render(Ae(Dr.StrictMode,{children:Ae(I0,{})}));
+`,O0="/we-remember/assets/landing.7fcbb3eb.png",A0=()=>Ae(ys,{children:kd(L0,{children:[Ae("h1",{className:"center",children:"Page deployed \u{1F3F4}\u200D\u2620\uFE0F!"}),Ae("img",{src:O0,alt:""})]})}),I0=()=>Ae(hm,{children:Ae(pm,{children:Ae(lu,{path:"/",element:Ae(R0,{}),children:Ae(lu,{index:!0,element:Ae(A0,{})})})})});const M0=fi.createRoot(document.getElementById("root"));M0.render(Ae(Dr.StrictMode,{children:Ae(I0,{})}));
