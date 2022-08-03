@@ -75,7 +75,11 @@ Error generating stack: `+o.message+`
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */var E0=X.exports,_0=Symbol.for("react.element"),P0=Symbol.for("react.fragment"),N0=Object.prototype.hasOwnProperty,$0=E0.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner,z0={key:!0,ref:!0,__self:!0,__source:!0};function Sd(e,t,n){var r,l={},o=null,i=null;n!==void 0&&(o=""+n),t.key!==void 0&&(o=""+t.key),t.ref!==void 0&&(i=t.ref);for(r in t)N0.call(t,r)&&!z0.hasOwnProperty(r)&&(l[r]=t[r]);if(e&&e.defaultProps)for(r in t=e.defaultProps,t)l[r]===void 0&&(l[r]=t[r]);return{$$typeof:_0,type:e,key:o,ref:i,props:l,_owner:$0.current}}Oo.Fragment=P0;Oo.jsx=Sd;Oo.jsxs=Sd;(function(e){e.exports=Oo})(Lo);const ys=Lo.exports.Fragment,Ae=Lo.exports.jsx,kd=Lo.exports.jsxs,T0=()=>Ae(ys,{children:Ae(x0,{})}),R0=()=>kd(ys,{children:[Ae(T0,{}),Ae(fm,{})]}),L0=wd.div`
+  height: max(500px, 100vh);
+  overflow: hidden;
+  width: 100%;
+
+  > img {
     width: 100%;
-    overflow: hidden;
-    height: max(500px, 100vh);
-`,O0="/we-remember/assets/landing.7fcbb3eb.png",A0=()=>Ae(ys,{children:kd(L0,{className:"center",children:[Ae("h1",{children:"Page deployed!"}),Ae("img",{src:O0,alt:""})]})}),I0=()=>Ae(hm,{children:Ae(pm,{children:Ae(lu,{path:"/",element:Ae(R0,{}),children:Ae(lu,{index:!0,element:Ae(A0,{})})})})}),M0=fi.createRoot(document.getElementById("root"));M0.render(Ae(Dr.StrictMode,{children:Ae(I0,{})}));
+  }
+`,O0="/we-remember/assets/landing.7fcbb3eb.png",A0=()=>Ae(ys,{children:kd(L0,{children:[Ae("h1",{className:"center",children:"Page deployed!"}),Ae("img",{src:O0,alt:""})]})}),I0=()=>Ae(hm,{children:Ae(pm,{children:Ae(lu,{path:"/",element:Ae(R0,{}),children:Ae(lu,{index:!0,element:Ae(A0,{})})})})});const M0=fi.createRoot(document.getElementById("root"));M0.render(Ae(Dr.StrictMode,{children:Ae(I0,{})}));
