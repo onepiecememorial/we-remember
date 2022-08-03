@@ -4,8 +4,8 @@ import landing from '../../Assets/landing.png';
 const Home = () => {
   return (
     <>
-      <S.ImageContainer className="center">
-        <h1>Page deployed!</h1>
+      <S.ImageContainer>
+        <h1 className="center">Page deployed!</h1>
         <img src={landing} alt="" />
       </S.ImageContainer>
     </>
