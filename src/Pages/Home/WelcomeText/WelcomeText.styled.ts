@@ -4,7 +4,7 @@ export const WelcomeSection = styled.section`
     width: 100%;
     height: 180vh;
     position: relative;
-    background-color: black;
+    background-color: transparent;
     color: white;
     display: flex;
     flex-direction: column;
@@ -23,6 +23,7 @@ export const WelcomeSection = styled.section`
         display: flex;
         flex-direction: column;
         align-items: center;
+        overflow: hidden;
     }
 
     &>div.marker{
@@ -32,15 +33,35 @@ export const WelcomeSection = styled.section`
         top: 150vh;
         left: 0;
     }
+
+    &  .textOutline{
+        text-shadow:
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000;
+    }
+`
+
+export const Image = styled.img`
+    position: absolute;
+    top: 0;
+    left: 0%;
+    z-index: 0;
+    width: 100%;
 `
 
 export const Title = styled.h1`
-    width: 100%;
-    padding-top: 10vh;
-    padding-bottom: 25vh;
-    font-size: 2em;
+    position: absolute;
+    left: 8%;
+    bottom: 8%;
+    z-index: 9;
+    font-size: 3em;
+    font-weight: 800;
     color: inherit;
+    text-align: center;
 `
+
 
 export const TextContainer = styled.div`
     width: 100%;
@@ -57,7 +78,7 @@ export const Text = styled.p`
     font-size: 1.2em;
     line-height: 1.5;
     text-align: center;
-    background-color: black;
+    background-color: inherit;
     opacity: 1;
     transition: 1s opacity ease-out;
     &.hidden{
