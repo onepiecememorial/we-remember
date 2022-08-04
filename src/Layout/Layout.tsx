@@ -1,22 +1,14 @@
-import { FC } from "react"
-import { Outlet } from "react-router"
-import DeployedBanner from "../Common/DeployedBanner/DeployedBanner"
-import Nav from "../Common/Nav/Nav"
-import { IN_PRODUCTION } from "../frontend.config"
+import { FC } from 'react';
+import { Outlet } from 'react-router';
+import Nav from '../Common/Nav/Nav';
 
-
-const Layout:FC = () => {
+const Layout: FC = () => {
   return (
     <>
-      {
-        (IN_PRODUCTION)
-            ? <DeployedBanner/>
-            : null
-      }
-        <Nav/>
-        <Outlet/>
+      <Nav />
+      <Outlet />
     </>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;
