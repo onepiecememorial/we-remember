@@ -8,7 +8,6 @@ const Home = () => {
   return (
     <>
       <S.ImageContainer>
-        <h1 className="center">Page deployed 🏴‍☠️!</h1>
         <img src={landing} alt="" />
       </S.ImageContainer>
     </>
