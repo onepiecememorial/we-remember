@@ -1,5 +1,4 @@
-import * as S from './Home.styled';
-import landing from '../../Assets/landing.png';
+import WelcomeText from './WelcomeText/WelcomeText';
 import lostNakamas from '../../lost-nakamas.json';
 
 const Home = () => {
@@ -7,10 +6,14 @@ const Home = () => {
 
   return (
     <>
-      <S.ImageContainer>
-        <h1 className="center">Page deployed 🏴‍☠️!</h1>
-        <img src={landing} alt="" />
-      </S.ImageContainer>
+      <WelcomeText />
+      <div
+        style={{
+          width: '100%',
+          height: '400px',
+          backgroundColor: 'green',
+        }}
+      />
     </>
   );
 };
