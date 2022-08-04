@@ -12,13 +12,14 @@
     "styled-components": "^5.3.5"
   },
   "scripts": {
-    "predeploy": "npm run build",
+    "predeploy": "npm run parse-csv && npm run build",
     "deploy": "gh-pages -d dist",
     "start": "vite",
     "build:dev": "tsc && vite build --mode development",
-    "build": "tsc && vite build",
+    "build": "npm run parse-csv && tsc && vite build",
     "preview:dev": "vite preview --mode development",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "parse-csv": "node scripts/csv-to-json.js"
   },
   "eslintConfig": {
     "extends": [
