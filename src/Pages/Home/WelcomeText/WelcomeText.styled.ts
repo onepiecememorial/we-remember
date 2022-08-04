@@ -42,26 +42,36 @@ export const Title = styled.h1`
     color: inherit;
 `
 
+export const TextContainer = styled.div`
+    width: 100%;
+    height: auto;
+    position: relative;
+    color: inherit;
+`
+
 export const Text = styled.p`
+    position: relative;
+    z-index: 99;
     width: 80%;
     color: inherit;
     font-size: 1.2em;
     line-height: 1.5;
     text-align: center;
+    background-color: black;
+    opacity: 1;
+    transition: 1s opacity ease-out;
+    &.hidden{
+        opacity: 0;
+        z-index: -9;   /* Cannot select text if this is not there*/
+    }
 `
 
 export const HiddenText = styled.h3`
     position: absolute;
-    bottom: 10%;
+    z-index: 9;
     width: 70%;
     color: inherit;
-    transition: 0.5s opacity ease-out;
-    &.hidden{
-        opacity: 0;
-    }
-    &.hidden.visible{
-        opacity: 1;
-    }
     font-size: 1.2em;
     text-align: center;
+    line-height: 1.5;
 `

@@ -9,6 +9,12 @@ const Home = () => {
   return (
     <>
       <WelcomeText />
+      <div
+        style={{
+          width: '100%',
+          height: '400px',
+          backgroundColor: 'green',
+        }}></div>
     </>
   );
 };
