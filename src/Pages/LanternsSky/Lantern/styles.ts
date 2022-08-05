@@ -23,22 +23,22 @@ const lanternAnimationCss = css`
   }
 `;
 
-export const LanternWrapper = styled.div<{ xPos: number; index: number }>`
+export const LanternWrapper = styled.button`
   align-items: center;
+  background-color: transparent;
   background-image: url(${lantern});
   background-position: center;
   background-size: cover;
   border-radius: 50%;
+  border: 0;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   height: ${LANTERN_DIAMETER}px;
   justify-content: flex-start;
   padding-top: ${LANTERN_DIAMETER / 5}px;
-  box-sizing: border-box;
-  left: ${({ xPos }) => `${xPos}px`};
   position: absolute;
-  top: ${({ index }) => `${index * (LANTERN_DIAMETER + 50)}px`};
   width: ${LANTERN_DIAMETER}px;
 
   ${lanternAnimationCss}
@@ -46,7 +46,6 @@ export const LanternWrapper = styled.div<{ xPos: number; index: number }>`
   animation-name: lantern-movement;
   animation-duration: 6s;
   animation-iteration-count: infinite;
-  animation-delay: ${({ index }) => Math.random() * index}s;
 `;
 
 export const LanternText = styled.p`
@@ -56,17 +55,3 @@ export const LanternText = styled.p`
   text-align: center;
   text-shadow: 0 0 0.25rem #000, 0 0 0.25rem #000;
 `;
-
-export const LanternButton = styled.button`
-  background-color: red;
-  background-repeat: no-repeat;
-  border: none;
-  cursor: pointer;
-  overflow: hidden;
-  outline: none
-`
-;
-
-export const MyVerticallyCenteredModal = styled.div`
-
-`
