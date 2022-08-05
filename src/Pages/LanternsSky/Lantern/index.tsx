@@ -18,14 +18,13 @@ const Lantern = ({ name, year, text, xPos, index }: Props) => {
 
   return (
     <LanternWrapper
-      xPos={xPos}
-      index={index}
       onClick={() =>
         setContent(<LanternProfile name={name} year={year} text={text} />)
       }
       style={{
-        top: `${index * (LANTERN_DIAMETER + 50)}px`,
         animationDelay: `${Math.random() * index}s`,
+        left: `${xPos}px`,
+        top: `${index * (LANTERN_DIAMETER + 50)}px`,
       }}>
       <LanternText>{name}</LanternText>
       <LanternText>{year}</LanternText>

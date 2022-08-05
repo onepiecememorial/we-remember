@@ -3,7 +3,8 @@ import { LanternContent, LostNakama } from './types';
 
 export const getRandomPositions = (nakamas: LostNakama[]): LanternContent[] => {
   return nakamas.map(({ name, year, text }) => {
-    const xPos = Math.random() * (window.innerWidth - LANTERN_DIAMETER);
+    const maxX = window.innerWidth - LANTERN_DIAMETER;
+    const xPos = Math.floor(Math.random() * (maxX + 1) + 0);
 
     return {
       name,

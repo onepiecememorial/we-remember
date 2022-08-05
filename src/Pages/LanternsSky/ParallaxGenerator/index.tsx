@@ -6,14 +6,12 @@ import { ParallaxCenterLayer } from './styles';
 
 const ParallaxGenerator = ({ lanternPages }: Props) => {
   return (
-    <Parallax
-      pages={lanternPages.length + 2}
-      style={{ top: '0', left: '0', height: '100%' }}>
+    <Parallax pages={lanternPages.length + 1}>
       {lanternPages.map((lanternPage, pageIndex) => (
         <ParallaxCenterLayer
           key={pageIndex}
           offset={pageIndex + 1}
-          speed={0.25}>
+          speed={0.15}>
           <div>
             {lanternPage.map((lantern, index) => (
               <Lantern {...lantern} index={index} key={lantern.name + index} />

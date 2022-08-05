@@ -23,7 +23,7 @@ const lanternAnimationCss = css`
   }
 `;
 
-export const LanternWrapper = styled.button<{ xPos: number; index: number }>`
+export const LanternWrapper = styled.button`
   align-items: center;
   background-color: transparent;
   background-image: url(${lantern});
@@ -37,7 +37,6 @@ export const LanternWrapper = styled.button<{ xPos: number; index: number }>`
   gap: 0.5rem;
   height: ${LANTERN_DIAMETER}px;
   justify-content: flex-start;
-  left: ${({ xPos }) => `${xPos}px`};
   padding-top: ${LANTERN_DIAMETER / 5}px;
   position: absolute;
   width: ${LANTERN_DIAMETER}px;
