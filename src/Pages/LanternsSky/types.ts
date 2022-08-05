@@ -7,5 +7,12 @@ export type LostNakama = {
 export type LanternContent = {
   name: string;
   year: string;
+  text: string;
   xPos: number;
+};
+
+export type LanternContext = {
+  name: string;
+  year: string;
+  text: string;
 };

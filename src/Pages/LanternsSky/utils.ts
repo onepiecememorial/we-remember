@@ -2,12 +2,13 @@ import { LANTERN_DIAMETER } from './Lantern/styles';
 import { LanternContent, LostNakama } from './types';
 
 export const getRandomPositions = (nakamas: LostNakama[]): LanternContent[] => {
-  return nakamas.map(({ name, year }) => {
+  return nakamas.map(({ name, year, text }) => {
     const xPos = Math.random() * (window.innerWidth - LANTERN_DIAMETER);
 
     return {
       name,
       year,
+      text,
       xPos,
     };
   });

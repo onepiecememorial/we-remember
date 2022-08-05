@@ -56,3 +56,17 @@ export const LanternText = styled.p`
   text-align: center;
   text-shadow: 0 0 0.25rem #000, 0 0 0.25rem #000;
 `;
+
+export const LanternButton = styled.button`
+  background-color: red;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none
+`
+;
+
+export const MyVerticallyCenteredModal = styled.div`
+
+`
