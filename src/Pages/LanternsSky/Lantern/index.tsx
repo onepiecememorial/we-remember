@@ -1,63 +1,35 @@
-import { LanternContent, LanternContext } from '../types';
-import { LanternText, LanternWrapper, LanternButton } from './styles';
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
-import {useEffect, useState} from 'react'
-import ReactDOM from 'react-dom';
+import { useContext } from 'react';
+import { ModalContext } from '../../../Common/Modal/ModalContext';
+import { LanternContent } from '../types';
+import { LanternText, LanternWrapper, LANTERN_DIAMETER } from './styles';
 
+const LanternProfile = ({ name, year, text }: Omit<LanternContent, 'xPos'>) => {
+  return (
+    <div>
+      <h2>{name}</h2>
+      <h3>{year}</h3>
+      <p>{text}</p>
+    </div>
+  );
+};
 
 const Lantern = ({ name, year, text, xPos, index }: Props) => {
-  const [showModal, setShowModal] = useState(false);
-  function toggleShowModal() {
-    setShowModal(!showModal)
-  }
-
-  function MyVerticallyCenteredModal(props) {
-    return (
-      <Modal
-        {...props}
-        size="lg"
-        aria-labelledby="contained-modal-title-vcenter"
-        centered
-      >
-        <Modal.Header closeButton>
-          <Modal.Title id="contained-modal-title-vcenter">
-            {props.name + " " + props.year}
-          </Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <h4>Centered Modal</h4>
-          <p>
-            {props.text}
-          </p>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button onClick={props.onHide}>Close</Button>
-        </Modal.Footer>
-      </Modal>
-    );
-  }
-
+  const { setContent } = useContext(ModalContext);
 
   return (
-    <>
-      <LanternButton onClick={toggleShowModal}>
-        <LanternWrapper xPos={xPos} index={index}>
-          <LanternText>{name}</LanternText>
-          <LanternText>{year}</LanternText>
-          <LanternText>{text}</LanternText>
-        </LanternWrapper>
-      </LanternButton>
-      <div className="h-100 d-flex align-items-center justify-content-center">
-          <MyVerticallyCenteredModal
-          name={name}
-          year={year}
-          text={text}
-          show={showModal}
-          onHide={() => setShowModal(false)}
-        />
-      </div>
-    </>
+    <LanternWrapper
+      xPos={xPos}
+      index={index}
+      onClick={() =>
+        setContent(<LanternProfile name={name} year={year} text={text} />)
+      }
+      style={{
+        top: `${index * (LANTERN_DIAMETER + 50)}px`,
+        animationDelay: `${Math.random() * index}s`,
+      }}>
+      <LanternText>{name}</LanternText>
+      <LanternText>{year}</LanternText>
+    </LanternWrapper>
   );
 };
 

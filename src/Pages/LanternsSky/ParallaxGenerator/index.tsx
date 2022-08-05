@@ -1,4 +1,5 @@
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
+import { memo } from 'react';
 import Lantern from '../Lantern';
 import { LanternContent } from '../types';
 import { ParallaxCenterLayer } from './styles';
@@ -28,4 +29,4 @@ export type Props = {
   lanternPages: LanternContent[][];
 };
 
-export default ParallaxGenerator;
+export default memo(ParallaxGenerator);
