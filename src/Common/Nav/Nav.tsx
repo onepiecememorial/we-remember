@@ -1,18 +1,18 @@
 import { Link } from 'react-router-dom';
 import * as S from './Nav.styled';
+import GomuPicture from '../../Assets/gomu.png';
 
 const Nav = () => {
   return (
-    <div>
-      <S.Header>This is the common app header</S.Header>
-
-      <div>
-        <Link to="/">Go to home page</Link>
+    <S.Header>
+      <img className='gomu-gomu' src={GomuPicture}/>
+      <div className='link-container'>
+        <Link className='link' to="/">Home Page</Link>
       </div>
-      <div>
-        <Link to="/lanterns">Go lanterns page</Link>
+      <div className='link-container'>
+        <Link to="/lanterns">Lanterns Page</Link>
       </div>
-    </div>
+    </S.Header>
   );
 };
 
