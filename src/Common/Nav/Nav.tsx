@@ -11,6 +11,9 @@ const Nav = () => {
           <Link className='link' to="/">Home Page</Link>
         </div>
         <div className='link-container'>
+          <Link to="/lanterns">Lanterns Page</Link>
+        </div>
+        <div className='link-container'>
           <Link to="/test">Test Page</Link>
         </div>
       </S.Header>
