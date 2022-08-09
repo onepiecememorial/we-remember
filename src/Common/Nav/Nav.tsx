@@ -12,6 +12,9 @@ const Nav = () => {
       <div>
         <Link to="/lanterns">Go lanterns page</Link>
       </div>
+      <div>
+        <Link to="/poneglyph">Go poneglyph page</Link>
+      </div>
     </div>
   );
 };
